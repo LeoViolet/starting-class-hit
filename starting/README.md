@@ -10,3 +10,5 @@ onde setar o css:
 style.css
 component.css
 dentro da tag style=(...)
+no arquivo index adicionamos as fonts do projeto
+feita conf. do css global no arquivo app.component.css
