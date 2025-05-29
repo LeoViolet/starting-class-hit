@@ -18,8 +18,9 @@ falaremos sobre routelink-"...." que fica dentro do componente header.html
 temos que importar seu "Module"
 # aula03
 configurar o app main e footer
-instalação do LUXON
+instalação do LUXON npm install luxon, npm install --save-dev @types/luxon, falaremos sobre o inicio do encapsulamento
 Criação do construtor do Angular
 Inicia á injeção de dependência
-Falaremos sobre a injeção de dependencia usando ROUTER como exemplo
-Inicio sobre interpolação {{....}}
+Falaremos sobre a injeção de dependencia usando ROUTER como exemplo. this.router.navigate(['/hit-class/project']); this.router.navigateByUrl('/hit-class/project');
+Inicio sobre interpolação {{....}} OBS: Interpolação somente para .html
+Inicio sobre template literals `${....}` OBS: Template Literals somente para .ts
