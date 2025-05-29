@@ -9,12 +9,12 @@ import { DateTime } from 'luxon';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent implements OnInit {
-  private dataTime;
+  protected dateTime;
   private routerinject = inject(Router); // Cria a nova forma de injeção
   // cria a forma tradicional de injeção usado nos services ou components
   constructor(private router: Router) {
     //35
-    this.dataTime = DateTime.now()
+    this.dateTime = DateTime.now()
   };
   // Construtor do Angular
   ngOnInit(): void {

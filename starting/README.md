@@ -21,3 +21,5 @@ configurar o app main e footer
 instalação do LUXON
 Criação do construtor do Angular
 Inicia á injeção de dependência
+Falaremos sobre a injeção de dependencia usando ROUTER como exemplo
+Inicio sobre interpolação {{....}}
