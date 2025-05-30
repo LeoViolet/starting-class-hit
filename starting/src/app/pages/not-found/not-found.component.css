@@ -1,6 +1,6 @@
 .not-found-card {
   position: relative;
-  width: 100%;
+  width: 95vw;
   min-height: 80vh;
   background-image: url('./../../../assets/img/background/not-found.png'); /* substitua com o caminho real */
   background-size: cover;
@@ -42,8 +42,8 @@
  
 .go-back {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 4rem;
+  right: 4rem;
   z-index: 2;
   background-color: var(--primary-color);
   color: var(--text-color-light);

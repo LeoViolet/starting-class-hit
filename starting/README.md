@@ -28,5 +28,8 @@ Inicio sobre template literals `${....}` OBS: Template Literals somente para .ts
 Criação dos components home, projects  
 Continuação da aula sobre rotas no arquivo app.routes.ts
 Explicação sobre rotas comuns e loadlazy
-Evento de click
+Evento de (click)="....." e outros
+
+# Aula 05
+Configuração do firebase hosting
 Copiar o template para outro projeto do Git

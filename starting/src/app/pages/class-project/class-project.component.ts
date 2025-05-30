@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-class-project',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './class-project.component.html',
   styleUrl: './../home/home.component.css'
 })
 export class ClassProjectComponent {
+  private router = inject(Router);
+
 goBack() {
-throw new Error('Method not implemented.');
+  this.router.navigateByUrl('/home')
 }
 
 }
