@@ -25,6 +25,8 @@ Falaremos sobre a injeção de dependencia usando ROUTER como exemplo. this.rout
 Inicio sobre interpolação {{....}} OBS: Interpolação somente para .html
 Inicio sobre template literals `${....}` OBS: Template Literals somente para .ts
 # aula04
-Criação dos components home, projects
+Criação dos components home, projects  
 Continuação da aula sobre rotas no arquivo app.routes.ts
+Explicação sobre rotas comuns e loadlazy
+Evento de click
 Copiar o template para outro projeto do Git

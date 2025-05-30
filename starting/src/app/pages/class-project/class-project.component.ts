@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-class-project',
   imports: [],
   templateUrl: './class-project.component.html',
-  styleUrl: './class-project.component.css'
+  styleUrl: './../home/home.component.css'
 })
 export class ClassProjectComponent {
+goBack() {
+throw new Error('Method not implemented.');
+}
 
 }
