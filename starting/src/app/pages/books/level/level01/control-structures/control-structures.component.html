@@ -1,1 +1,18 @@
-<p>control-structures works!</p>
+<div class="age-checker-container">
+    <div class="age-checker-card"  [ngClass]="{'adult': age >=18, 'minor': age < 18}">
+      <h2 class="age-title">Verificação de Idade:</h2>
+        <p class="age result">
+            {{this.age >= 18 ? (this.age + '  (Maior de Idade)') : (this.age + '  (Menor de Idade)') }}
+        </p>
+        <div class="age-icon">
+            @if (age >= 18) {
+                <span>Maior</span>
+            } @else {
+                <span>Menor</span>
+            }
+        </div>
+        @for (item of this.numberList; track $index) {
+            <span> {{ item }}</span>
+        }
+    </div>
+</div>

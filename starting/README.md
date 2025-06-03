@@ -33,5 +33,10 @@ Configuração do firebase hosting
 
 # Aula 05
 Criação dos componentes de nivelamento e suas tags
+1. Início sobre Diretiva
+2. Ternário
+3. If e Else
+4. For of
+5. Operators
 
 Copiar o template para outro projeto do Git
