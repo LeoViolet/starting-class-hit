@@ -40,6 +40,9 @@ Criação dos componentes de nivelamento e suas tags
 Operadores
 1. Operador Lógico (||)
 2. Operador de Coalescencia Nula (??)
-3. 
+3. Operador Ternário no TS
+4. Operador de Atribuição Condicional (?)
+5. Operador de Negação (!)
+6. Operador de Dupla Negação (!!)
 
 Copiar o template para outro projeto do Git
