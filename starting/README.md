@@ -37,6 +37,9 @@ Criação dos componentes de nivelamento e suas tags
 2. Ternário
 3. If e Else
 4. For of
-5. Operators
+Operadores
+1. Operador Lógico (||)
+2. Operador de Coalescencia Nula (??)
+3. 
 
 Copiar o template para outro projeto do Git
