@@ -29,7 +29,9 @@ Criação dos components home, projects
 Continuação da aula sobre rotas no arquivo app.routes.ts
 Explicação sobre rotas comuns e loadlazy
 Evento de (click)="....." e outros
+Configuração do firebase hosting
 
 # Aula 05
-Configuração do firebase hosting
+Criação dos componentes de nivelamento e suas tags
+
 Copiar o template para outro projeto do Git
