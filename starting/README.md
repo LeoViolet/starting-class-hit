@@ -44,5 +44,8 @@ Operadores
 4. Operador de Atribuição Condicional (?)
 5. Operador de Negação (!)
 6. Operador de Dupla Negação (!!)
+7. Injeção de Dependência ou DI
 
-Copiar o template para outro projeto do Git
+# Aula 06
+1. Inicio ao conceito de Services, e criação do service
+2. Request em uma API, criar o componente, de rota da API, bem como sua rota
