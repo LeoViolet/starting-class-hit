@@ -13,9 +13,9 @@
 .local-header {
     position: relative;
     width: 100%;
-    background-color: var(--background-color-header);
     color: var(--text-color-light);
     box-shadow: var(--shadow);
+    background: var(--background-color-header);
 }
 
 .local-header-content {
