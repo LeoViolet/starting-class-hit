@@ -1,0 +1,73 @@
+.intro-container {
+  padding: 2rem;
+  background: var(--background-color);
+  font-family: var(--main-font-family);
+  color: var(--text-color);
+  line-height: var(--main-line-height);
+}
+
+.intro-header {
+  background: var(--text-hover);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  color: var(--text-color-light);
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: var(--animation-move-gradient);
+  background-size: var(--animation-background-size);
+}
+
+.intro-header h1 {
+  font-size: var(--main-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.intro-header h2 {
+  font-size: var(--main-font-size2);
+  margin-bottom: 1rem;
+}
+
+.setup-guide h3 {
+  color: var(--text-color-h3);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.setup-guide ol {
+  padding-left: 1.5rem;
+}
+
+.setup-guide li {
+  margin-bottom: 1.2rem;
+}
+
+.setup-guide ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--text-hover2);
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+code, pre {
+  background-color: var(--background-color-code);
+  color: var(--text-color-light);
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: block;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+}
