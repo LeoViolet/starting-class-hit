@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-interface-segregation-principle',
   imports: [],
   templateUrl: './interface-segregation-principle.component.html',
-  styleUrl: './interface-segregation-principle.component.css'
+  styleUrl: './../single-responsibility-principle/single-responsibility-principle.component.css'
 })
 export class InterfaceSegregationPrincipleComponent {
 
