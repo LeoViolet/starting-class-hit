@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PromisesService {
   protected promise = new Promise(resolve => resolve('Nossa Promessa'));
-  protected promiseValue: any = null;
+  promiseValue: any = null;
   constructor() {
       this.promise.then(value => console.log("Promise in Service", value))
   }
