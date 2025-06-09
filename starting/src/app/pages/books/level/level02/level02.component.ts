@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './level02.component.css'
 })
 export class Level02Component {
-
+    
 }
