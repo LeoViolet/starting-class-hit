@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, inject } from '@angular/core';
+import { ObservableService } from '../../../../../_services/observable.service';
 
 @Component({
   selector: 'app-observables',
@@ -9,17 +9,13 @@ import { Observable } from 'rxjs';
   styleUrl: './../promises/promises.component.css'
 })
 export class ObservablesComponent {
-  seekData$ = ():Observable<string> => {
-    return new Observable(observer => {
-      setTimeout(() => {
-        const success = Math.random() > 0.3;
-        if (!success) {
-          observer.error("Error: Falha ao Carregar dados!");
-        }
-        observer.next("Dados Carregados com Sucesso!");
-        observer.complete();
-      },1500);
-    });
+  protected observableService = inject(ObservableService);
+  protected localLoad = false;
+  protected message: string = "";
+  protected localerror: string = "";
 
+  loadDataRxJs = () => {};
+  loadData() {
+  throw new Error('Method not implemented.');
   }
 }
