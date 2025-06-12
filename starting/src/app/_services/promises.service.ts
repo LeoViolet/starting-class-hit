@@ -12,4 +12,15 @@ export class PromisesService {
   getPromise() {
     this.promise.then(res => this.promiseValue = res + 'Agora foi modificada')
   }
+  seekRandomData = (): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const success = Math.random() > 0.3;
+        if (!success) {
+          reject('Erro: Falha ao carregar dados!');
+        }
+        resolve('Dados carregados com sucesso!')
+      }, 1500);
+    });
+  }
 }

@@ -1,1 +1,60 @@
-<p>observables works!</p>
+<div class="container">
+  <h2>Exemplo de Observable no Angular</h2>
+  <p>Este exemplo demonstra como trabalhar com Observables no Angular.</p>
+  <br>
+ 
+  <section class="topic">
+    <h4>Demonstração de Observable</h4>
+    <p>Clique no botão para simular uma requisição assíncrona:</p>
+    <div class="demo-area">
+        <button class="demo-button" (click)="loadData()">Load Data from Observable</button>
+        @if (this.localLoad) {
+            <div class="loading-indicator">
+                <div class="spinner">
+                </div>
+                <span>Loading...</span>
+            </div>
+        }
+        @if (message) {
+            <div class="success-message">
+                <i class="icon">ok</i>
+            </div>
+            {{message}}
+        }   
+        @if (localerror) {
+            <div class="error-message">
+                <i class="icon">✗</i>
+            </div>
+            {{localerror}}
+        }   
+    </div>
+  </section>
+ 
+  <section class="topic">
+    <h4>Demonstração de Observable com operador Of()</h4>
+    <p>Clique no botão para simular uma requisição assíncrona:</p>
+    <div class="demo-area">
+        <button class="demo-button" (click)="loadDataRxJs()">Load Data from Of()</button>
+        @if (this.localLoad) {
+        <div class="loading-indicator">
+            <div class="spinner">
+            </div>
+          <span>Loading...</span>
+        </div>
+        }
+        @if (message) {
+            <div class="success-message">
+                <i class="icon">ok</i>
+            </div>
+            {{message}}
+        }
+        @if (localerror) {
+            <div class="error-message">
+                <i class="icon">✗</i>
+            </div>
+            {{localerror}}
+        }   
+
+    </div>
+  </section>
+</div>
