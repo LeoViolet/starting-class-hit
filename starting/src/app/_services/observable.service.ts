@@ -4,11 +4,12 @@ import { delay, map, Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ObservableService {
-
+export class DummyObservableService {
+  private counter: number | undefined = undefined;
+  private localObservable$!: Observable<string | undefined>;
   constructor() { }
 
-  seekData$ = ():Observable<string> => {
+  dummySeekData$ = ():Observable<string> => {
     return new Observable(observer => {
       setTimeout(() => {
         const success = Math.random() > 0.3;
@@ -20,6 +21,7 @@ export class ObservableService {
       },1500);
     });
   }
+
   dummyDataObservableRxJsOf = (): Observable<string | null> => {
     return of(null).pipe(delay(1500), map(() => {
       if (Math.random() > 0.3) {
@@ -27,5 +29,9 @@ export class ObservableService {
       }
       throw new Error('Error: Falha ao carregar Dados!')
     }));
+  }
+
+  dummyAsyncObservable(): Observable<string> {
+    return this.localObservable$ = of('Data by PipeAsync já disponível e Subscrito sem que vc pedisse: ').pipe(delay(1000))
   }
 }
