@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/body/header/header.component';
 import { MainComponent } from './components/body/main/main.component';
 import { FooterComponent } from './components/body/footer/footer.component';
+import { WeatherService } from './_services/weather.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,11 @@ import { FooterComponent } from './components/body/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'starting';
+  constructor (private weather: WeatherService) {
+    this.weather.getWeather("Lisbon").subscribe({
+      next: (res) => {console.log("RES: ", res)},
+      error: (e) => {console.log("Error: ", e)},
+      complete: () => console.log("Fim da subscrição")
+    });
+  }
 }
