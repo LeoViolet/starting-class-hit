@@ -7,7 +7,7 @@ import { IWeather } from '../_share/interfaces/weather';
   providedIn: 'root'
 })
 export class WeatherService {
-  private readonly apiURL = "http://api.weatherapi.com/v1/current.json ";
+  private readonly apiURL = "https://api.weatherapi.com/v1/current.json";
   private readonly apiKey = environment.weatherKey;
   constructor(private http: HttpClient) { }
 
