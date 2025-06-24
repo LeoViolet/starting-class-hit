@@ -16,6 +16,24 @@
   border-radius: 0;
 }
 
+.success-header {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background: var(--text-hover2);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: var(--main-font-size2);
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  border-radius: 0;
+}
+
 .container {
   background: var(--background-color);
   padding: 2rem;

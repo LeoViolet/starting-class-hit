@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-http-error-500',
+  selector: 'app-http-success-200',
   imports: [CommonModule, RouterLink],
-  templateUrl: './http-error-500.component.html',
-  styleUrl: './http-error-500.component.css'
+  templateUrl: './http-success-200.component.html',
+  styleUrl: './../http-error-500/http-error-500.component.css'
 })
-export class HttpError500Component {
+export class HttpSuccess200Component {
 
 }
