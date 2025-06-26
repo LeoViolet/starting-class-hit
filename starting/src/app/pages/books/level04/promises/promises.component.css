@@ -1,0 +1,130 @@
+.demo-area {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: var(--background-color-sections2);
+    border-radius: var(--border-radius);
+}
+ 
+.demo-button {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+ 
+.demo-button:hover {
+    background: var(--text-hover2);
+    box-shadow: var(--shadow-hover);
+}
+ 
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+ 
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--box-shadow);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+ 
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+ 
+.success-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4caf50;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+ 
+.error-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(204, 33, 33, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+ 
+.icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/** Inputs e Botões Gerais **/
+ 
+input[type="text"],
+input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+/* CSS do Componente nivelamento 02/Binding */
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.user-card {
+  background: var(--background-color-sections, #fff);
+  padding: 1rem;
+  border-radius: var(--border-radius, 8px);
+  width: 200px;
+  box-shadow: var(--shadow, 0 2px 6px rgba(0, 0, 0, 0.1));
+  transition: var(--transition, box-shadow 0.3s ease);
+}
+
+.user-card:hover {
+  box-shadow: var(--shadow-hover, 0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.user-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.user-info {
+  margin-top: 0.5rem;
+}
+
+.user-info h4 {
+  margin: 0.5rem 0 0.25rem;
+  color: var(--primary-color, #222);
+}
+
+/* Directiva do component directiva no nivel02 */
+.highlight {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}

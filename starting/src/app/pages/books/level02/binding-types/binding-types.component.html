@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Binding & Types</h2>
+  <p>Este exemplo demonstra como usar binding e o type no lugar da interface e TwoWay Databinding</p>
+  <br>
+ 
+  <section class="topic">
+
+        <div class="user-list">
+            <div class="user-card">
+                <!-- Property Binding: Vem de algum TS para template -->
+            <img [src]="user.avatar" [alt]="user.name" />
+            <!-- Binding, renderiza variáveis do TS no tempalte -->
+            <div class="user-info">
+                <h4>{{ user.name }}</h4>
+                <p>Email: {{ user.email }}</p>
+                <p>ID: {{ user.isAdmin}}</p>
+            </div>
+            </div>
+    </div>
+    <h4>Digite o seu Nome</h4>
+    <!-- TwoWay Databind, tanto envia para TS como recebe do TS -->
+    <input type="text" [(ngModel)]="this.user.name" placeholder="Seu Nome">
+
+  </section>
+  <section class="topic">
+    <h4>Digite o seu Nome</h4>
+
+    <!-- <p>Clique no botão para simular uma requisição assíncrona com Async & Await:</p> -->
+    <div class="demo-area">
+        <!-- <button class="demo-button">Load Data from Async & Await</button> -->
+    </div>
+  </section>
+</div>
