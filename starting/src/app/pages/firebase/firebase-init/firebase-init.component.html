@@ -1,0 +1,135 @@
+<section class="firebase-guide">
+  <header class="header">
+    <h1>Guia Completo: Firebase em Angular 19</h1>
+    <p>Integração Firebase com Angular 19</p>
+    <p class="subtitle">
+      Guia completo para integrar Firebase Hosting, Authentication e Firestore em seu projeto Angular 19 sem usar AngularFire.
+    </p>
+  </header>
+
+  <article>
+    <h2>Configuração passo a passo</h2>
+
+    <section>
+      <h3>1. Instalação do Firebase</h3>
+      <pre><code>
+npm install -g firebase-tools
+firebase login
+npm install firebase
+      </code></pre>
+    </section>
+
+    <section>
+      <h3>2. Configuração do Hosting</h3>
+      <pre><code>
+firebase init hosting
+      </code></pre>
+      <p><strong>Configure conforme abaixo:</strong></p>
+      <ul>
+        <li>Public directory: <code>dist/seu-projeto-angular/browser</code></li>
+        <li>SPA: <code>Yes</code></li>
+        <li>Substituir index.html: <code>Yes</code></li>
+      </ul>
+      <p class="note success">✅ Se estiver usando o Angular Router, o Firebase redireciona todas as URLs para index.html</p>
+      <p class="note warning">❌ Se for um site estático sem roteamento Angular, URLs como /about darão erro 404</p>
+    </section>
+
+    <section>
+      <h3>3. Configuração do Authentication</h3>
+      <ol>
+        <li>Habilite no Firebase Console</li>
+        <li>Selecione <strong>Email/Senha</strong> e ative</li>
+      </ol>
+      <pre><code>
+import &#123; getAuth &#125; from 'firebase/auth';
+export const auth = getAuth(app);
+      </code></pre>
+      <p><strong>Exemplo de uso:</strong></p>
+      <pre><code>
+import &#123; auth &#125; from './firebase';
+import &#123; signInWithEmailAndPassword &#125; from 'firebase/auth';
+
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => &#123;
+    // Usuário logado
+  &#125;);
+      </code></pre>
+    </section>
+
+    <section>
+      <h3>4. Configuração do Firestore</h3>
+      <pre><code>
+firebase init firestore
+      </code></pre>
+      <p><strong>Regras básicas:</strong></p>
+      <pre><code>
+rules_version = '2';
+service cloud.firestore &#123;
+  match /databases/&#123;database&#125;/documents &#123;
+    match /&#123;document=**&#125; &#123;
+      allow read, write: if request.auth != null;
+    &#125;
+  &#125;
+&#125;
+      </code></pre>
+      <pre><code>
+import &#123; getFirestore &#125; from 'firebase/firestore';
+export const db = getFirestore(app);
+      </code></pre>
+    </section>
+
+    <section>
+      <h3>5. Configuração Completa do firebase.ts</h3>
+      <pre><code>
+import &#123; initializeApp &#125; from 'firebase/app';
+import &#123; getAuth &#125; from 'firebase/auth';
+import &#123; getFirestore &#125; from 'firebase/firestore';
+
+const firebaseConfig = &#123;
+  apiKey: 'SUA_API_KEY',
+  authDomain: 'SEU_AUTH_DOMAIN',
+  projectId: 'SEU_PROJECT_ID',
+  storageBucket: 'SEU_STORAGE_BUCKET',
+  messagingSenderId: 'SEU_SENDER_ID',
+  appId: 'SEU_APP_ID',
+&#125;;
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+      </code></pre>
+      <p><strong>⚠️ Use <code>environment.ts</code> e <code>environment.prod.ts</code>:</strong></p>
+      <pre><code>
+"fileReplacements": [
+  &#123;
+    "replace": "src/environments/environment.ts",
+    "with": "src/environments/environment.prod.ts"
+  &#125;
+]
+      </code></pre>
+    </section>
+
+    <section>
+      <h3>6. Build e Deploy</h3>
+      <pre><code>
+ng build --configuration production
+firebase deploy
+      </code></pre>
+      <p><strong>Configuração do <code>firebase.json</code>:</strong></p>
+      <pre><code>
+"rewrites": [
+  &#123; "source": "**", "destination": "/index.html" &#125;
+]
+      </code></pre>
+    </section>
+
+    <footer>
+      <h3>Sistema Completo</h3>
+      <ul>
+        <li>✅ Hosting profissional no Firebase</li>
+        <li>✅ Sistema de autenticação pronto</li>
+        <li>✅ Banco de dados Firestore configurado</li>
+      </ul>
+    </footer>
+  </article>
+</section>
