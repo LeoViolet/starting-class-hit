@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-http-success-200',
   imports: [CommonModule, RouterLink],
   templateUrl: './http-success-200.component.html',
-  styleUrl: './../http-error-500/http-error-500.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class HttpSuccess200Component {
 

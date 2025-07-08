@@ -10,7 +10,7 @@ import { TemplateLiteralComponent } from "./template-literal/template-literal.co
   selector: 'app-level02',
   imports: [BindingTypesComponent, DestructuringComponent, DirectivesComponent, PipesComponent, SpreadComponent, TemplateLiteralComponent],
   templateUrl: './level02.component.html',
-  styleUrl: './../level01/level01.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Level02Component {
 

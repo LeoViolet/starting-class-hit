@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule1-one-indentation',
   imports: [],
   templateUrl: './rule1-one-indentation.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule1OneIndentationComponent {
 

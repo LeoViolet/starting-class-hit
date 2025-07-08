@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-calisthenics',
   imports: [],
   templateUrl: './calisthenics.component.html',
-  styleUrl: './../firebase/firebase.component.css'
+  styleUrl: './../angular/angular.component.css'
 })
 export class CalisthenicsComponent {
 

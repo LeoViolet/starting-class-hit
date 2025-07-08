@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule5-one-dot-line',
   imports: [],
   templateUrl: './rule5-one-dot-line.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule5OneDotLineComponent {
 

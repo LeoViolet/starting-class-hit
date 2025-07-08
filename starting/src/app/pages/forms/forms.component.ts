@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-api',
+  selector: 'app-forms',
   imports: [],
-  templateUrl: './api.component.html',
+  templateUrl: './forms.component.html',
   styleUrl: './../angular/angular.component.css'
 })
-export class ApiComponent {
+export class FormsComponent {
 
 }

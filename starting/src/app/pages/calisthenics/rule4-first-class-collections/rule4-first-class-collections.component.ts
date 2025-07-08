@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule4-first-class-collections',
   imports: [],
   templateUrl: './rule4-first-class-collections.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule4FirstClassCollectionsComponent {
 

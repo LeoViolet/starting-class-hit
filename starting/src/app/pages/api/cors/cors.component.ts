@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-level03',
+  selector: 'app-cors',
   imports: [],
-  templateUrl: './level03.component.html',
+  templateUrl: './cors.component.html',
   styleUrl: './../../angular/angular.component.css'
 })
-
-export class Level03Component {
+export class CorsComponent {
 
 }

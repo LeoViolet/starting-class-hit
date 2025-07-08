@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-level01',
   imports: [ControlStructuresComponent, OperatorsComponent, DependencyInjectionComponent, RouterModule],
   templateUrl: './level01.component.html',
-  styleUrl: './level01.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Level01Component {
 

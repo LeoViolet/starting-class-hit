@@ -1,20 +1,14 @@
-<section class="firebase-guide">
+<section class="container-guide topic">
   <div class="content-wrap">
     <header class="header">
       <h1>Rule 5: One Dot per Line</h1>
       <p class="subtitle">Avoid chaining too many calls on a single line</p>
     </header>
-
     <article>
-      <p>
-        Correntes de chamadas dificultam testes e depuração em Angular. Uma linha = uma chamada.
-      </p>
-
+      <p>Correntes de chamadas dificultam testes e depuração em Angular. Uma linha = uma chamada.</p>
       <h2>Exemplo no Angular</h2>
-
       <p><strong>Evite:</strong></p>
       <pre><code>this.authService.getUser().getCompany().getName()</code></pre>
-
       <p><strong>Prefira:</strong></p>
       <pre><code>const user = this.authService.getUser();
 const company = user.getCompany();

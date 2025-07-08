@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule9-dont-use-getters-setters',
   imports: [],
   templateUrl: './rule9-dont-use-getters-setters.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule9DontUseGettersSettersComponent {
 

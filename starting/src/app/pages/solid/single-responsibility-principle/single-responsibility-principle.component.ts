@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-single-responsibility-principle',
   imports: [],
   templateUrl: './single-responsibility-principle.component.html',
-  styleUrl: './single-responsibility-principle.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class SingleResponsibilityPrincipleComponent {
 

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule7-keep-entities-small',
   imports: [],
   templateUrl: './rule7-keep-entities-small.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule7KeepEntitiesSmallComponent {
 

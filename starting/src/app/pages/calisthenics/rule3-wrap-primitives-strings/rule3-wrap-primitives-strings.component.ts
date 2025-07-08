@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule3-wrap-primitives-strings',
   imports: [],
   templateUrl: './rule3-wrap-primitives-strings.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule3WrapPrimitivesStringsComponent {
 

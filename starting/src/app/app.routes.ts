@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'angular', pathMatch: 'full'},
+    {path: 'angular/get-starting', loadComponent:() => import('./pages/angular/angular.component').then(c => c.AngularComponent)},
     {path: 'angular', loadComponent:() => import('./pages/angular/angular-component/angular.component').then(c => c.AngularComponent)},
     {path: 'angular/git', loadComponent:() => import('./pages/angular/git/git.component').then(c => c.GitComponent)},
     {path: 'angular/dry', loadComponent:() => import('./pages/dry/dry.component').then(c => c.DryComponent)},

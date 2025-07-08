@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-level04',
   imports: [PromisesComponent, ObservablesComponent, SignalComponent, Observable02Component, RouterModule],
   templateUrl: './level04.component.html',
-  styleUrl: './../level01/level01.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Level04Component {
     

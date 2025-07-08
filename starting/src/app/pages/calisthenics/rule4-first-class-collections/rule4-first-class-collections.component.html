@@ -1,20 +1,14 @@
-<section class="firebase-guide">
+<section class="container-guide topic">
   <div class="content-wrap">
     <header class="header">
       <h1>Rule 4: First Class Collections</h1>
       <p class="subtitle">Collections should be encapsulated in their own classes</p>
     </header>
-
     <article>
-      <p>
-        Em Angular, evite expor diretamente arrays. Envolva listas em classes com comportamento próprio.
-      </p>
-
+      <p>Em Angular, evite expor diretamente arrays. Envolva listas em classes com comportamento próprio.</p>
       <h2>Exemplo no Angular</h2>
-
       <p><strong>Evite:</strong></p>
       <pre><code>this.users: User[] = [];</code></pre>
-
       <p><strong>Prefira:</strong></p>
       <pre><code>class UserList &#123;
   private users: User[] = [];

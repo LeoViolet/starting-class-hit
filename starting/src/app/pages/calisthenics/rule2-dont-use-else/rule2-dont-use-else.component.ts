@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-rule2-dont-use-else',
   imports: [],
   templateUrl: './rule2-dont-use-else.component.html',
-  styleUrl: './../../firebase/firebase.component.css'
+  styleUrl: './../../angular/angular.component.css'
 })
 export class Rule2DontUseElseComponent {
 
