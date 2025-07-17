@@ -1,44 +1,51 @@
 import { AuthGmailService } from './../../../_services/auth-gmail.service';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { PopUpService } from '../../../_services/pop-up.service';
  
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css'
 })
 
 export class SigninComponent {
-  protected router = inject(Router)
+  protected router = inject(Router);
+  private popUpService = inject(PopUpService);
   protected gmailService = inject(AuthGmailService);
-  email: string = '';
-  password: string = '';
+  protected signInForms: UntypedFormGroup;
   isValid!: boolean;
  
- 
-  onSubmit(form: any): void {
-    if (!form.valid) {
-      this.isValid = false;
-    }
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
-    this.gmailService.signIn(this.email, this.password).subscribe({
-      next: (res) => {console.log("Data From Google: ", res.user), this.router.navigateByUrl('/')},
-      error: (e) => {console.error("Error in Gmail Authentication"), this.router.navigateByUrl('/')}
+  constructor(private fb: UntypedFormBuilder) {
+    this.signInForms = this.fb.nonNullable.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     })
   }
  
   goBack(): void {
-    this.router.navigateByUrl("/")
+    this.router.navigateByUrl("/");
   }
  
-  clearFields(): void {
-    this.email = '';
-    this.password = '';
+ 
+  onSubmit(): void {
+    if (!this.signInForms.valid) {
+      this.isValid = false
+    }
+ 
+  }
+ 
+  gmailAuthentication() {
+    const email = this.signInForms.get("email")?.value;
+    const password = this.signInForms.get("password")?.value;
+    this.gmailService.signIn(email, password).subscribe({
+      next: (res) => { console.log("Data From Google: ", res.user), this.router.navigate(['/e-book/angular/wellcome']) },
+      error: (e) => { console.error("Error in Gmail Authentication"), this.popUpService.show(e.message, 'error', 7000), this.router.navigateByUrl('/') }
+    });
   }
  
 }
